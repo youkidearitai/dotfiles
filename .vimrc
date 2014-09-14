@@ -27,7 +27,7 @@ if has('vim_starting')
 endif
 
 " Required:
-call neobundle#begin(expand('/Users/tekitoh/.vim/bundle'))
+call neobundle#begin(expand('~/.vim/bundle'))
 
 " Let NeoBundle manage NeoBundle
 " Required:
