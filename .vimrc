@@ -1,6 +1,3 @@
-" background set
-colorscheme default
-
 " クリップボードをシステムと共有する
 set clipboard+=unnamed
 " タグファイルの指定
@@ -79,4 +76,7 @@ runtime macros/matchit.vim
 " switch.vim
 nnoremap - :Switch<cr>
 " switch.vim end
+
+" background set
+colorscheme jellybeans
 
