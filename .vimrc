@@ -47,6 +47,8 @@ NeoBundle 'tomtom/tcomment_vim'
 NeoBundle 'AndrewRadev/switch.vim'
 NeoBundle 'mattn/gist-vim', {'depends' : 'mattn/webapi-vim'}
 
+NeoBundle 'davidhalter/jedi-vim'
+
 " You can specify revision/branch/tag.
 NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
 
