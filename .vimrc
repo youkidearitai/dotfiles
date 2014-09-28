@@ -37,7 +37,6 @@ NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'flazz/vim-colorschemes'
 
-NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'tpope/vim-speeddating'
 
 NeoBundle 'Align'
@@ -67,11 +66,9 @@ NeoBundleCheck
 " インデントを自動で挿入する
 set autoindent
 
-" vim-indent-guides
-let g:indent_guides_enable_on_vim_startup = 1
-hi IndentGuidesOdd  ctermbg=grey
-hi IndentGuidesEven ctermbg=lightgrey
-" vim-indent-guides end
+" インデントを表示させる
+set list
+set listchars=tab:\>\-,extends:<,trail:-
 
 " %コマンドによるジャンプ
 runtime macros/matchit.vim
