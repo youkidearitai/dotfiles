@@ -48,6 +48,7 @@ NeoBundle 'AndrewRadev/switch.vim'
 NeoBundle 'mattn/gist-vim', {'depends' : 'mattn/webapi-vim'}
 
 NeoBundle 'davidhalter/jedi-vim'
+NeoBundle 'Shougo/vimfiler', {'depends': 'unite.vim'}
 
 " You can specify revision/branch/tag.
 NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
@@ -65,6 +66,8 @@ NeoBundleCheck
 
 " インデントを自動で挿入する
 set autoindent
+
+:let g:vimfiler_as_default_explorer = 1
 
 " vim-indent-guides
 let g:indent_guides_enable_on_vim_startup = 1
