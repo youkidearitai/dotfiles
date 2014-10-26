@@ -37,7 +37,6 @@ NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'flazz/vim-colorschemes'
 
-NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'tpope/vim-speeddating'
 
 NeoBundle 'Align'
@@ -49,6 +48,7 @@ NeoBundle 'mattn/gist-vim', {'depends' : 'mattn/webapi-vim'}
 
 NeoBundle 'davidhalter/jedi-vim'
 NeoBundle 'Shougo/vimfiler', {'depends': 'unite.vim'}
+NeoBundle 'DrawIt'
 
 " You can specify revision/branch/tag.
 NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
@@ -74,6 +74,9 @@ let g:indent_guides_enable_on_vim_startup = 1
 hi IndentGuidesOdd  ctermbg=grey
 hi IndentGuidesEven ctermbg=lightgrey
 " vim-indent-guides end
+" インデントを表示させる
+set list
+set listchars=tab:\>\-,extends:<,trail:-
 
 " %コマンドによるジャンプ
 runtime macros/matchit.vim
