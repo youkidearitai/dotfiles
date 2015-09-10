@@ -57,8 +57,6 @@ NeoBundle 'davidhalter/jedi-vim'
 NeoBundle 'Shougo/vimfiler', {'depends': 'unite.vim'}
 NeoBundle 'DrawIt'
 
-NeoBundle 'Shougo/vimfiler', { 'depends' : 'shougo/unite.vim' }
-
 " You can specify revision/branch/tag.
 NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
 NeoBundle 'kakkyz81/evervim'
