@@ -50,6 +50,7 @@ NeoBundle 'AndrewRadev/switch.vim'
 NeoBundle 'mattn/gist-vim', {'depends' : 'mattn/webapi-vim'}
 
 NeoBundle 'davidhalter/jedi-vim'
+NeoBundle 'Shougo/vimfiler', {'depends': 'unite.vim'}
 NeoBundle 'DrawIt'
 
 NeoBundle 'Shougo/vimfiler', { 'depends' : 'shougo/unite.vim' }
@@ -90,6 +91,13 @@ endfunction
 " インデントを自動で挿入する
 set autoindent
 
+:let g:vimfiler_as_default_explorer = 1
+
+" vim-indent-guides
+let g:indent_guides_enable_on_vim_startup = 1
+hi IndentGuidesOdd  ctermbg=grey
+hi IndentGuidesEven ctermbg=lightgrey
+" vim-indent-guides end
 " インデントを表示させる
 set list
 set listchars=tab:\>\-,extends:<,trail:-
