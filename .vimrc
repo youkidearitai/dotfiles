@@ -1,3 +1,7 @@
+augroup MyAutoCmd
+  autocmd!
+augroup END
+
 " クリップボードをシステムと共有する
 set clipboard+=unnamed
 " タグファイルの指定
