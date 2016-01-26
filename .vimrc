@@ -59,7 +59,7 @@ NeoBundle 'DrawIt'
 
 " You can specify revision/branch/tag.
 NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
-NeoBundle 'kakkyz81/evervim'
+NeoBundle 'yasutomo57jp/evervim'
 
 " Required:
 call neobundle#end()
