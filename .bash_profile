@@ -1,4 +1,4 @@
-if [ "$(uname)" == 'Darwin']; then
+if [ "$(uname)" == 'Darwin' ]; then
     if [ -f ~/.bashrc ]; then
         source ~/.bashrc
     fi
