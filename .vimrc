@@ -56,6 +56,7 @@ NeoBundle 'mattn/gist-vim', {'depends' : 'mattn/webapi-vim'}
 NeoBundle 'davidhalter/jedi-vim'
 NeoBundle 'Shougo/vimfiler', {'depends': 'unite.vim'}
 NeoBundle 'DrawIt'
+NeoBundle 'nanotech/jellybeans.vim'
 
 " You can specify revision/branch/tag.
 NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
