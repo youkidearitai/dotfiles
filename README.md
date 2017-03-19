@@ -1,7 +1,7 @@
 ドットファイルです。
 
-    $ ln -sf .vimrc dotfiles/.vimrc
-    $ ln -sf .bashrc dotfiles/.bashrc
-    $ ln -sf .bash_profile dotfiles/.bash_profile
+    $ ln -sf dotfiles/.vimrc ~/.vimrc
+    $ ln -sf dotfiles/.bashrc ~/.bashrc
+    $ ln -sf dotfiles/.bash_profile ~/.bash_profile
 
 
