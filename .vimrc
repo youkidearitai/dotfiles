@@ -21,6 +21,9 @@ set number
 " BackSpaceで改行を削除
 set backspace=2
 
+" filetype別のインデント設定
+filetype plugin indent on
+
 " NeoBundle
 "NeoBundle Scripts-----------------------------
 if has('vim_starting')
