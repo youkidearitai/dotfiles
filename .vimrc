@@ -64,6 +64,7 @@ NeoBundle 'nanotech/jellybeans.vim'
 " You can specify revision/branch/tag.
 NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
 NeoBundle 'yasutomo57jp/evervim'
+NeoBundle 'fatih/vim-go'
 
 " Required:
 call neobundle#end()
