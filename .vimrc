@@ -1,6 +1,44 @@
-augroup MyAutoCmd
-  autocmd!
-augroup END
+if &compatible
+  set nocompatible
+endif
+" Add the dein installation directory into runtimepath
+set runtimepath+=~/.cache/dein/repos/github.com/Shougo/dein.vim
+
+if dein#load_state('~/.cache/dein')
+  call dein#begin('~/.cache/dein')
+
+  call dein#add('~/.cache/dein/repos/github.com/Shougo/dein.vim')
+  call dein#add('Shougo/neosnippet.vim')
+  call dein#add('Shougo/neosnippet-snippets')
+  call dein#add('tpope/vim-fugitive')
+  call dein#add('kien/ctrlp.vim')
+  call dein#add('flazz/vim-colorschemes')
+  call dein#add('tpope/vim-speeddating')
+  call dein#add('vim-scripts/Align')
+  call dein#add('tpope/vim-surround')
+  call dein#add('tomtom/tcomment_vim')
+  call dein#add('AndrewRadev/switch.vim')
+  call dein#add('mattn/webapi-vim')
+  call dein#add('mattn/gist-vim', {'depends' : 'mattn/webapi-vim'})
+  call dein#add('davidhalter/jedi-vim')
+  call dein#add('Shougo/vimfiler', {'depends': 'unite.vim'})
+  call dein#add('vim-scripts/DrawIt')
+  call dein#add('nanotech/jellybeans.vim')
+  call dein#add('Shougo/vimshell', { 'rev' : '3787e5' })
+  call dein#add('fatih/vim-go')
+
+  call dein#add('Shougo/deoplete.nvim')
+  if !has('nvim')
+    call dein#add('roxma/nvim-yarp')
+    call dein#add('roxma/vim-hug-neovim-rpc')
+  endif
+
+  call dein#end()
+  call dein#save_state()
+endif
+
+filetype plugin indent on
+syntax enable
 
 " クリップボードをシステムと共有する
 set clipboard+=unnamed
@@ -24,76 +62,8 @@ set backspace=2
 " filetype別のインデント設定
 filetype plugin indent on
 
-" NeoBundle
-"NeoBundle Scripts-----------------------------
-if has('vim_starting')
-  set nocompatible               " Be iMproved
-
-  " Required:
-  set runtimepath+=~/.vim/bundle/neobundle.vim/
-endif
-
-" Required:
-call neobundle#begin(expand('~/.vim/bundle'))
-
-" Let NeoBundle manage NeoBundle
-" Required:
-NeoBundleFetch 'Shougo/neobundle.vim'
-
-" My Bundles here:
-NeoBundle 'Shougo/neosnippet.vim'
-NeoBundle 'Shougo/neosnippet-snippets'
-NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'kien/ctrlp.vim'
-NeoBundle 'flazz/vim-colorschemes'
-
-NeoBundle 'tpope/vim-speeddating'
-
-NeoBundle 'Align'
-NeoBundle 'tpope/vim-surround'
-NeoBundle 'tomtom/tcomment_vim'
-
-NeoBundle 'AndrewRadev/switch.vim'
-NeoBundle 'mattn/gist-vim', {'depends' : 'mattn/webapi-vim'}
-
-NeoBundle 'davidhalter/jedi-vim'
-NeoBundle 'Shougo/vimfiler', {'depends': 'unite.vim'}
-NeoBundle 'DrawIt'
-NeoBundle 'nanotech/jellybeans.vim'
-
-" You can specify revision/branch/tag.
-NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
-NeoBundle 'yasutomo57jp/evervim'
-NeoBundle 'fatih/vim-go'
-
-" Required:
-call neobundle#end()
-
 " Required:
 filetype plugin indent on
-
-" If there are uninstalled bundles found on startup,
-" this will conveniently prompt you to install them.
-NeoBundleCheck
-"End NeoBundle Scripts-------------------------
-
-nnoremap <Leader>e :VimFilerExplorer<CR>
-let s:hooks = neobundle#get_hooks("vimfiler")
-function! s:hooks.on_source(bundle)
-  let g:vimfiler_as_default_explorer = 1
-  let g:vimfiler_enable_auto_cd = 1
-
-  " vimfiler specific key mappings
-  autocmd MyAutoCmd FileType vimfiler call s:vimfiler_settings()
-  function! s:vimfiler_settings()
-    " ^^ to go up
-    nmap <buffer> ^^ <Plug>(vimfiler_switch_to_parent_directory)
-    " use R to refresh
-    nmap <buffer> R <Plug>(vimfiler_redraw_screen)
-    " overwrite C-l
-    nmap <buffer> <C-l> <C-w>l
-  endfunction
-endfunction
 
 " インデントを自動で挿入する
 set autoindent
@@ -122,15 +92,3 @@ colorscheme jellybeans
 " インデントは標準で4
 set tabstop=4
 set shiftwidth=4
-
-" TODO: evervim特有の設定をevervim専用の場所に保管するように変更
-nnoremap <silent> ,el :<C-u>EvervimNotebookList<CR>
-nnoremap <silent> ,et :<C-u>EvervimListTags<CR>
-nnoremap <silent> ,ec :<C-u>EvervimCreateNote<CR>
-nnoremap ,es :<C-u>EvervimSearchByQuery<SPACE>
-nnoremap <silent> ,eT :<C-u>EvervimSearchByQuery<SPACE>tag:todo -tag:done -tag:someday<CR>
-nnoremap <silent> ,eta :<C-u>EvervimSearchByQuery<SPACE>tag:todo -tag:done<CR>
-
-"let g:evervim_usemarkdown=0
-
-
