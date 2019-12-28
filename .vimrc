@@ -26,6 +26,7 @@ if dein#load_state('~/.cache/dein')
   call dein#add('nanotech/jellybeans.vim')
   call dein#add('Shougo/vimshell', { 'rev' : '3787e5' })
   call dein#add('fatih/vim-go')
+  call dein#add('tokorom/vim-review')
 
   call dein#add('Shougo/deoplete.nvim')
   if !has('nvim')
