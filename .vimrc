@@ -38,6 +38,11 @@ if dein#load_state('~/.cache/dein')
   call dein#save_state()
 endif
 
+" Uncomment if you want to install not-installed plugins on startup.
+"if dein#check_install()
+" call dein#install()
+"endif
+
 filetype plugin indent on
 syntax enable
 
