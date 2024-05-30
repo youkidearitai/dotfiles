@@ -95,6 +95,10 @@ nnoremap - :Switch<cr>
 " background set
 colorscheme jellybeans
 
+" modeline
+set modeline
+set modelines=2
+
 " インデントは標準で4
 set tabstop=4
 set shiftwidth=4
