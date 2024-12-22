@@ -34,6 +34,7 @@ if dein#load_state('~/.cache/dein')
     call dein#add('roxma/vim-hug-neovim-rpc')
   endif
 
+  call dein#add('kurocode25/mdforvim')
   call dein#end()
   call dein#save_state()
 endif
